@@ -1,6 +1,6 @@
 <package>
   <name>pal_navigation_msgs</name>
-  <version>0.11.3</version>
+  <version>0.12.11</version>
   <description>
     This package defines messages used by the PAL navigation stack and tools.</description>
   <maintainer email="paul.mathieu@pal-robotics.com">Paul Mathieu</maintainer>
@@ -13,11 +13,13 @@
   <build_depend>sensor_msgs</build_depend>
   <build_depend>actionlib</build_depend>
   <build_depend>actionlib_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
 
   <run_depend>message_runtime</run_depend>
   <run_depend>nav_msgs</run_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>actionlib</run_depend>
   <run_depend>actionlib_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
 
 </package>

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(pal_navigation_msgs)
 
-find_package(catkin REQUIRED COMPONENTS message_generation nav_msgs sensor_msgs actionlib actionlib_msgs)
+find_package(catkin REQUIRED COMPONENTS message_generation nav_msgs sensor_msgs actionlib actionlib_msgs geometry_msgs)
 
 include_directories(include)
 
@@ -30,6 +30,8 @@ add_message_files(
     ServiceStatus.msg
     TabletPOI.msg
     VisualLocDB.msg
+    Highways.msg
+    LaserImage.msg
 )
 
 add_service_files(
@@ -39,6 +41,7 @@ add_service_files(
     ChangeBuilding.srv
     DisableEmergency.srv
     FinalApproachPose.srv
+    ListMaps.srv
     GetMapConfiguration.srv
     GetNodes.srv
     GetPOI.srv
@@ -51,9 +54,9 @@ add_service_files(
     VisualLocRecognize.srv
 )
 
-generate_messages(DEPENDENCIES nav_msgs actionlib_msgs sensor_msgs)
+generate_messages(DEPENDENCIES nav_msgs actionlib_msgs sensor_msgs geometry_msgs)
 
-catkin_package(CATKIN_DEPENDS message_runtime nav_msgs actionlib_msgs sensor_msgs)
+catkin_package(CATKIN_DEPENDS message_runtime nav_msgs actionlib_msgs sensor_msgs geometry_msgs)
 
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
