@@ -15,11 +15,12 @@ add_message_files(
   FILES
   Points.msg
   ConPoint.msg
+  Face_detection.msg
 )
 
 #add_service_files(
 #   FILES
-#   
+#
 #)
 
 generate_messages(
